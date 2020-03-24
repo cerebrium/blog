@@ -5,6 +5,7 @@ import { props } from 'gatsbypropshandler'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+// comment
 const Food = () => {
   const data = useStaticQuery(graphql`
     query {

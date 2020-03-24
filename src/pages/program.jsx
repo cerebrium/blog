@@ -75,7 +75,7 @@ const Program = () => {
         </label>
       </div>
       <div className='content'>
-        <h1 className='centerTitle'>Program</h1>
+        <h1 className='indexTitle'>Program</h1>
         <div className='programText'>
           <h2>The format for this page is different, little boxes with nifty pictures and blurbs about cool stuff won't cut it for actually doing things! Instead here there are a variety of articles I have read and enjoyed, and stuff I am writing. If anything you find looks not true or could be optimized, please reach out to me on the contact page... I am relatively new and looking to learn as much as I can!</h2>
         </div>

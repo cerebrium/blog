@@ -100,7 +100,7 @@ const Credits = () => {
         </label>
       </div>
       <div className='content'>
-        <h1 className='centerTitle'>Contact Me</h1>
+        <h1 className='indexTitle'>Contact Me</h1>
         <div className='contact'>
           <form onSubmit={submitForm} action='https://formspree.io/meqelkae' method="POST" className='myForm'>
               <label className='labels'>Name:</label>{'  '}

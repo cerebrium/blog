@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react"
 import { Link } from "gatsby"
 import { props } from 'gatsbypropshandler'
 import SEO from "../components/seo"
+import '../components/layout.scss'
 
 const Program = () => {
   const [ line, setLine ] = useState("line")
@@ -9,6 +10,7 @@ const Program = () => {
   const [ dropDownContent, setDropDownContent ] = useState("dropdownContent")
   const [ navBar, setNavBar ] = useState("navBar")
   const [ mode, setMode ] = useState("overallDivMain")
+
 
   useEffect ( () => {
     let myVar = props('modeToggle')
@@ -48,26 +50,26 @@ const Program = () => {
     <div className={mode}>
       <SEO title="Programming" />
       <div className={navBar}>
-          <div className='dropDownHamburger'>
-            <div className={line}></div>
-            <div className={line}></div>
-            <div className={line}></div>
+        <div className='dropDownHamburger'>
+          <div className={line}></div>
+          <div className={line}></div>
+          <div className={line}></div>
+        </div>
+        <div className={dropDownContent}>
+          <div className={linkStyle}>
+            <Link to="/" className='links'>Home</Link>
           </div>
-          <div className={dropDownContent}>
-            <div className={linkStyle}>
-              <Link to="/" className='links'>Home</Link>
-            </div>
-            <div className={linkStyle}>
-              <Link to="/food/" className='links'>Eat</Link>
-            </div>
-            <div className={linkStyle}>
-              <Link to="/travel/" className='links'>Travel</Link>
-            </div>
-            <div className={linkStyle}>
-              <Link to="/credits/" className='links'>Contact</Link>
-            </div>
+          <div className={linkStyle}>
+            <Link to="/food/" className='links'>Eat</Link>
+          </div>
+          <div className={linkStyle}>
+            <Link to="/travel/" className='links'>Travel</Link>
+          </div>
+          <div className={linkStyle}>
+            <Link to="/credits/" className='links'>Contact</Link>
           </div>
         </div>
+      </div>
       <div className='modeToggle'>
         <label className='switch'>
           <input type='checkbox' onClick={toggleMode}/>

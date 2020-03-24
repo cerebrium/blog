@@ -45,13 +45,13 @@
     min-width: 100vw;
     background-size: cover;
     display: grid;
-    grid-template-columns: 5% 95%;
-    grid-template-rows: 5% 95%;
+    grid-template-columns: 5vw 95vw;
+    grid-template-rows: 5vh 95vh;
     grid-template-areas: 
     "navbar navBar"
     "mainContent mainContent"
     ;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 %image-scroll-left {

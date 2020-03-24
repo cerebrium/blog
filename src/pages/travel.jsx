@@ -4,6 +4,7 @@ import { props } from 'gatsbypropshandler'
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import '../components/layout.scss'
 
 const Travel = () => {
   const data = useStaticQuery(graphql`

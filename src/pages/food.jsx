@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { props } from 'gatsbypropshandler'
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import '../components/layout.scss'
 
 // comment
 const Food = () => {

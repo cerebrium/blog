@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react"
 import { Link } from "gatsby"
 import { props } from 'gatsbypropshandler'
 import SEO from "../components/seo"
+import '../components/layout.scss'
 
 const Credits = () => {
   const [ line, setLine ] = useState("line")

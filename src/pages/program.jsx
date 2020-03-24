@@ -69,13 +69,21 @@ const Program = () => {
           </div>
         </div>
       <div className='modeToggle'>
-        <label class='switch'>
+        <label className='switch'>
           <input type='checkbox' onClick={toggleMode}/>
-          <span class='slider round'></span>
+          <span className='slider round'></span>
         </label>
       </div>
       <div className='content'>
-        <h1>Program</h1>
+        <h1 className='indexTitle'>Program</h1>
+        <div className='programText'>
+          <h2>The format for this page is different, little boxes with nifty pictures and blurbs about cool stuff won't cut it for actually doing things! Instead here there are a variety of articles I have read and enjoyed, and stuff I am writing. If anything you find looks not true or could be optimized, please reach out to me on the contact page... I am relatively new and looking to learn as much as I can!</h2>
+        </div>
+        <div className='programLinkBox'>
+          <h2 className='noSpace'>Intro Title Effect</h2>
+          <h3 className='noSpace'>The little ball that turns into my title on the home page is explained <Link to='/introTitleBlurb/' className='inTextLink'>HERE</Link></h3>
+          <h3 className='noSpace'>Author: Nick Shankland</h3>
+        </div>
       </div>
     </div>
   )

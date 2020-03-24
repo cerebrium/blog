@@ -111,24 +111,24 @@ const Food = () => {
           </div>
         </div>
         <div className='modeToggle'>
-          <label class='switch'>
+          <label className='switch'>
             <input type='checkbox' onClick={toggleMode}/>
-            <span class='slider round'></span>
+            <span className='slider round'></span>
           </label>
         </div>
       <div className='contentTravel'>
-        <h1 className='indexTitle'>Foods</h1>
+        <h1 className='indexTitle'>Eats</h1>
         <div className={imageContainers}>
           <div className='innerContainer'>
             <Img fluid={data.chickenInHanoi.childImageSharp.fluid} className='gatsbyImages'/>
           </div>
           <div className='textInsideBox'>
-            <h3>This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?</h3>
+            <h2>This is some chicken I got in Saigon. Generally I did not enjoy Saigon as much as Hanoi, but htis chicken was fantastic. It was one of the first meals that we got in the city and it really made me happy. The rice there was from the bottom of the pan and was kinda crunchy, but in a good way. and the chicken was so soft it truly was very well done!</h2>
           </div>
         </div>
         <div className={imageContainersRight}>
           <div className='textInsideBox'>
-            <h3>This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?</h3>
+            <h2>Bali really is one of my favorite places on earth, and you can probably tell from all of the pictures from there! This was me having another espresso and cookie combination at a beach hotel, but I also opted for one of their local juices there. This one was the Bali tonic, but they were all good. They are just fruit juice freshly squeezed and put into a bottle with healthy spices and things. Carrot and turmeric actually go quite well with each other... as I found out on this trip!</h2>
           </div>
           <div className='innerContainer'>
             <Img fluid={data.espressoAndDrink.childImageSharp.fluid} className='gatsbyImages'/>
@@ -139,7 +139,7 @@ const Food = () => {
             <Img fluid={data.sushi.childImageSharp.fluid} className='gatsbyImages'/>
           </div>
           <div className='textInsideBox'>
-            <h3>This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?</h3>
+            <h2>This is sushi! No i did not go to Japan, although I really wish I could! Definitely a future travel location, but this sushi is to be found in Bali... of course! The actual taste of this sushi was pretty good, for being completely vegetarian. That being said I really liked the image more than anything else. The way the mushrooms come sprouting out of the little roll was really cool. Also there is fruit in it! </h2>
           </div>
         </div>
       </div>

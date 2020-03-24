@@ -73,18 +73,32 @@
     margin-bottom: 3%;
 }
 
+%buttonsDark {
+    width: 10vw;
+    height: 5vh;
+    margin-bottom: 7%;
+    background-color: rgba(160, 159, 159, 0);
+    border: 3px solid #2196F3;
+    border-radius: 35%;
+    color: #2196F3;
+}
+
+%buttonsDark:hover {
+    box-shadow: 5px 5px 5px #2196F3;
+}
+
 %buttons {
     width: 10vw;
     height: 5vh;
     margin-bottom: 7%;
     background-color: rgba(160, 159, 159, 0);
-    border: 3px solid green;
+    border: 3px solid rgb(63, 62, 62);
     border-radius: 35%;
-    color: green;
+    color: rgb(63, 62, 62);
 }
 
 %buttons:hover {
-    box-shadow: 5px 5px 5px green;
+    box-shadow: 5px 5px 5px rgb(63, 62, 62);
 }
 
 /********************** nav bar ********************************/
@@ -112,6 +126,18 @@
     z-index: 1;
 }
 
+.navBarMain {
+    position: fixed;
+    top: 1vh;
+    left: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 8vw;
+    height: 3vh;
+    grid-area: navbar;
+    z-index: 1;
+}
+
 .line {
     background-color: rgb(63, 62, 62);
     height: .6vh;
@@ -126,11 +152,22 @@
     margin-bottom: 1.5px;
 }
 
+.lineMain {
+    background-color: white;
+    height: .6vh;
+    width: 2vw;
+    margin-bottom: 1.5px;
+}
+
 .dropdownContent {
     display: none;
 }
 
 .dropdownContentDark {
+    display: none;
+}
+
+.dropdownContentMain {
     display: none;
 }
 
@@ -147,6 +184,14 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(212, 212, 212);
+    padding: 1%;
+}
+
+.navBarMain:hover .dropdownContentMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
     padding: 1%;
 }
 
@@ -172,7 +217,16 @@
     @extend %remove-decoration;
 }
 
+.linksMainTwo {
+    @extend %remove-decoration-dark;
+    color: white;
+}
+
 .linksDark {
+    @extend %remove-decoration-dark;
+}
+
+.linksMain {
     @extend %remove-decoration-dark;
 }
 
@@ -185,11 +239,11 @@ html, body {
 
 .overallDiv {
     @extend %overall-prototype;
-    background-image: url('./baliBackground.jpg');
+    background-image: url('./aleks-dahlberg-g58DqgOzCcM-unsplash\ \(1\).jpg');
 }
 
 
-.content{
+.content {
     grid-area: mainContent;
     @extend %center-content;
     justify-content: flex-start;
@@ -197,14 +251,14 @@ html, body {
 
 .indexTitle {
     @extend %center-text;
+    font-size: 3em;
 }
 
-.indexContent {
-    @extend %white-boxes;
-    @extend %center-text;
-    font-size: 1.3em;
-    max-width: 50vw;
-    padding: 1%;
+.indexLine {
+    background-color: white;
+    animation-name: indexLineAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 /********************** Travel page ********************************/
@@ -240,25 +294,35 @@ html, body {
 
 .imageContainer {
     @extend %image-scroll-left;
+    margin-bottom: 5%;
+    text-align: justify;
 }
 
 .imageContainerDark {
     @extend %image-scroll-left;
+    margin-bottom: 5%;
+    text-align: justify;
 }
 
 .imageContainerRight {
     @extend %image-scroll-right;
     margin-top: 2%;
+    text-align: justify;
 }
 
 .imageContainerRightDark {
     @extend %image-scroll-right;
     margin-top: 2%;
+    text-align: justify;
 }
 
 .innerContainer {
     min-width: 20vw;
     margin: 1%;
+}
+
+.textInsideBox {
+    margin: 2%;
 }
 
 /********************** contact page ********************************/
@@ -285,6 +349,10 @@ html, body {
 
 .contactButton {
     @extend %buttons;
+}
+
+.contactButtonDark {
+    @extend %buttonsDark;
 }
 
 /********************** Toggle Dark Mode page ********************************/
@@ -358,4 +426,85 @@ html, body {
     border-radius: 50%;
   }
 
-  
+  /****************************************** Program Page *************************************************/
+  .programText {
+      width: 60vw;
+      text-align: justify;
+    }
+    
+    .inTextLink {
+        text-decoration: none;
+        font-size: 1.1em;
+        color: rgb(235, 68, 185);
+    }
+
+    .inTextLink:hover {
+        font-size: 1.2em;
+        color: rgb(218, 106, 208);
+        text-shadow: 3px 3px 3px grey;
+    }
+    
+  .programLinkBox {
+      width: 60vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid grey;
+    }
+
+    .noSpace {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+/****************************************** article Pages *************************************************/
+.programActualContent {
+    text-align: justify;
+}
+
+.gatsbyImagesProgram {
+    margin: 5% auto 5% ;
+    max-height: 50vh;
+    max-width: 55vw;
+}
+
+.gatsbyImagesProgramOne {
+    margin: 5% auto 5% ;
+    max-width: 55vw;
+}
+
+.spacer {
+    min-height: 15vh;
+}
+
+  /****************************************** effects *************************************************/
+
+@keyframes indexLineAnimation {
+    0% {
+        background-color: white;
+        transform: translateY(300px);
+        height: 2vh;
+        width: 2vh;
+        border-radius: 50%;
+    }
+    
+    80% {
+        background-color: white;
+        height: 2vh;
+        width: 2vh;
+        border-radius: 50%;
+    }
+    
+    99% {
+        background-color: rgba(255, 255, 255, 0);
+        height: 7vh;
+        width: 45vw; 
+    }
+
+    100% {
+        background-color: black;
+        font-size: 3em;
+        color: white;
+    }
+
+}

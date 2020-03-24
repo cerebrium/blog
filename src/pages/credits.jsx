@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 const Credits = () => {
   const [ line, setLine ] = useState("line")
+  const [ buttonStyle, setButtonStyle ] = useState("contactButton")
   const [ linkStyle, setLinkStyle ] = useState("linkStyle")
   const [ dropDownContent, setDropDownContent ] = useState("dropdownContent")
   const [ navBar, setNavBar ] = useState("navBar")
@@ -20,6 +21,7 @@ const Credits = () => {
         setLinkStyle('linkStyleDark')
         setDropDownContent('dropdownContentDark')
         setNavBar('navBarDark')
+        setButtonStyle('contactButtonDark')
       }
     }
   }, [])
@@ -31,6 +33,7 @@ const Credits = () => {
         setLinkStyle('linkStyleDark')
         setDropDownContent('dropdownContentDark')
         setNavBar('navBarDark')
+        setButtonStyle('contactButtonDark')
         props({
           modeToggle: 'overallDivMainDark'
         })
@@ -40,6 +43,7 @@ const Credits = () => {
         setLinkStyle('linkStyle')
         setDropDownContent('dropdownContent')
         setNavBar('navBar')
+        setButtonStyle('contactButton')
         props({
           modeToggle: 'overallDivMain'
         })
@@ -90,9 +94,9 @@ const Credits = () => {
         </div>
       </div>
       <div className='modeToggle'>
-        <label class='switch'>
+        <label className='switch'>
           <input type='checkbox' onClick={toggleMode}/>
-          <span class='slider round'></span>
+          <span className='slider round'></span>
         </label>
       </div>
       <div className='content'>
@@ -105,7 +109,7 @@ const Credits = () => {
               <input type="email" name="email" className='inputBars'/><br/>
               <label className='labels'>Message:</label>
               <textarea type="textarea" rows='15' cols='16' name="message" className='myTextArea'></textarea><br/>
-              {status === "SUCCESS" ? <p>Thanks!</p> : <button className='contactButton'>Submit</button>}
+              {status === "SUCCESS" ? <p>Thanks!</p> : <button className={buttonStyle}>Submit</button>}
               {status === "ERROR" && <p>Ooops! There was an error.</p>}
           </form>
         </div>

@@ -1,40 +1,59 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import '../components/layout.scss'
 
-const IndexPage = () => (
-  <div className='overallDiv'>
-    <SEO title="Home" />
-      <div className='navBar'>
-        <div className='dropDownHamburger'>
-          <div className='line'></div>
-          <div className='line'></div>
-          <div className='line'></div>
+const IndexPage = () => {
+  const [ gate, setGate ] = useState('true')
+
+  useEffect( () => {
+    setTimeout( () => {
+      setGate('false')
+    }, 2000)
+  }, [])
+
+  var contentInside
+  if (gate === 'true') {
+    contentInside = ''
+  } else {
+    contentInside = (
+      <>
+        <Link to='/travel' className='linksMainTwo'>(Travel </Link>{' && '}<Link to='/food/' className='linksMainTwo'> Food) </Link>{' || '}<Link to='/program/' className='linksMainTwo'> Code</Link>
+      </>
+    )
+  }
+
+
+  return (
+    <div className='overallDiv'>
+      <SEO title="Home" />
+        <div className='navBarMain'>
+          <div className='dropDownHamburger'>
+            <div className='lineMain'></div>
+            <div className='lineMain'></div>
+            <div className='lineMain'></div>
+          </div>
+          <div className='dropdownContentMain'>
+            <div className='linkStyleMain'>
+              <Link to="/travel/" className='linksMain'>Travel</Link>
+            </div>
+            <div className='linkStyleMain'>
+              <Link to="/food/" className='linksMain'>Eat</Link>
+            </div>
+            <div className='linkStyleMain'>
+              <Link to="/program/" className='linksMain'>Program</Link>
+            </div>
+            <div className='linkStyleMain'>
+              <Link to="/credits/" className='linksMain'>Contact</Link>
+            </div>
+          </div>
         </div>
-        <div className='dropdownContent'>
-          <div className='linkStyle'>
-            <Link to="/travel/" className='links'>Travel</Link>
-          </div>
-          <div className='linkStyle'>
-            <Link to="/food/" className='links'>Eat</Link>
-          </div>
-          <div className='linkStyle'>
-            <Link to="/program/" className='links'>Program</Link>
-          </div>
-          <div className='linkStyle'>
-            <Link to="/credits/" className='links'>Contact</Link>
-          </div>
+        <div className='content'>
+          <div className='indexLine'>{contentInside}</div>
         </div>
-      </div>
-      <div className='content'>
-        <h1 className='indexTitle'>Welcome to my <span>Blog</span></h1>
-        <h3 className='indexContent'>
-          This is a page where any and all things will be discussed! Mostly I am into travelling, food, and programming. As such there are three different main pages, and within those pages all sorts of fun stuff and discussions. If you would like to contact me for any reason there is also a contact page. Don't be afraid to leave me a note. Also I make blogs and portfolios for fun for people so if you would like one let me know!
-        </h3>
-      </div>
-  </div>
-)
+    </div>
+  )
+}
 
 export default IndexPage

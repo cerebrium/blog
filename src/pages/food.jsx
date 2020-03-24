@@ -117,7 +117,7 @@ const Food = () => {
           </label>
         </div>
       <div className='contentTravel'>
-        <h1 className='indexTitle'>Eats</h1>
+        <h1 className='centerTitle'>Eats</h1>
         <div className={imageContainers}>
           <div className='innerContainer'>
             <Img fluid={data.chickenInHanoi.childImageSharp.fluid} className='gatsbyImages'/>

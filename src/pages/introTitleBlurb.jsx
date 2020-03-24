@@ -110,7 +110,7 @@ const IntroTitleBlurbs = () => {
             </label>
             </div>
             <div className='content'>
-                <h1 className='indexTitle'>Intro Screen Effect</h1>
+                <h1 className='centerTitle'>Intro Screen Effect</h1>
                 <div className='programText'>
                     <h3 className='programActualContent'>
                         The effect is pretty stright forward conceptually: have a ball start at the low on the screen and go up util it reaches the point where we want the title... then have it turn into the title. In order to do this I have used some css, and some state in Gatsby, and some conditional rendering. <br />

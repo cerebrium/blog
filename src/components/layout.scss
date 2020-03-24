@@ -1,12 +1,23 @@
 /********************** scss stuff ********************************/
 %remove-decoration {
     text-decoration: none;
-    color: rgb(230, 128, 128);
+    color: rgb(99, 97, 97);
     font-size: 1.5em;
 }
 
 %remove-decoration:hover {
-    color: rgb(241, 202, 202);
+    color: rgb(129, 127, 127);
+    font-size: 1.55em;
+}
+
+%remove-decoration-dark {
+    text-decoration: none;
+    color: #2196F3;
+    font-size: 1.5em;
+}
+
+%remove-decoration-dark:hover {
+    color: rgb(166, 190, 235);
     font-size: 1.55em;
 }
 
@@ -40,6 +51,26 @@
     "navbar navBar"
     "mainContent mainContent"
     ;
+    overflow: hidden;
+}
+
+%image-scroll-left {
+    max-width: 80vw;
+    margin-left: 5vw;
+    border: 2px solid rgb(160, 159, 159);
+    padding: 5px;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+%image-scroll-right {
+    max-width: 80vw;
+    margin-left: 15vw;
+    border: 2px solid rgb(160, 159, 159);
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3%;
 }
 
 /********************** nav bar ********************************/
@@ -52,6 +83,7 @@
     width: 8vw;
     height: 3vh;
     grid-area: navbar;
+    z-index: 1;
 }
 
 .navBarDark {
@@ -63,17 +95,18 @@
     width: 8vw;
     height: 3vh;
     grid-area: navbar;
+    z-index: 1;
 }
 
 .line {
-    background-color: black;
+    background-color: rgb(63, 62, 62);
     height: .6vh;
     width: 2vw;
     margin-bottom: 1.5px;
 }
 
 .lineDark {
-    background-color: rgb(252, 248, 248);
+    background-color: #2196F3;
     height: .6vh;
     width: 2vw;
     margin-bottom: 1.5px;
@@ -125,6 +158,10 @@
     @extend %remove-decoration;
 }
 
+.linksDark {
+    @extend %remove-decoration-dark;
+}
+
 /********************** home page ********************************/
 html, body {
     margin: 0;
@@ -165,6 +202,7 @@ html, body {
     "mainContent mainContent"
     ;
     background-color: rgb(248, 247, 247);
+    color: rgb(63, 62, 62);
 }
 
 .overallDivMainDark {
@@ -174,11 +212,39 @@ html, body {
     "mainContent mainContent"
     ;
     background-color: black;
-    color: white;
+    color: #2196F3;
 }
 
 .contentTravel{
     grid-area: mainContent;
+}
+
+.gatsbyImages {
+    max-height: 50vh;
+    max-width: 20vw;
+}
+
+.imageContainer {
+    @extend %image-scroll-left;
+}
+
+.imageContainerDark {
+    @extend %image-scroll-left;
+}
+
+.imageContainerRight {
+    @extend %image-scroll-right;
+    margin-top: 2%;
+}
+
+.imageContainerRightDark {
+    @extend %image-scroll-right;
+    margin-top: 2%;
+}
+
+.innerContainer {
+    min-width: 20vw;
+    margin: 1%;
 }
 
 /********************** Toggle Dark Mode page ********************************/
@@ -251,3 +317,5 @@ html, body {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  

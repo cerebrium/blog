@@ -22,6 +22,13 @@ const Food = () => {
             ...GatsbyImageSharpFluid
           }
         }
+      },
+      sushi: file(relativePath: { eq: "sushi.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `)
@@ -81,7 +88,7 @@ const Food = () => {
 
   return (
     <div className={mode}>
-      <SEO title="Home" />
+      <SEO title="Foods" />
       <div className={navBar}>
           <div className='dropDownHamburger'>
             <div className={line}></div>
@@ -99,7 +106,7 @@ const Food = () => {
               <Link to="/program/" className='links'>Program</Link>
             </div>
             <div className={linkStyle}>
-              <Link to="/credits/" className='links'>Credits</Link>
+              <Link to="/credits/" className='links'>Contact</Link>
             </div>
           </div>
         </div>
@@ -125,6 +132,14 @@ const Food = () => {
           </div>
           <div className='innerContainer'>
             <Img fluid={data.espressoAndDrink.childImageSharp.fluid} className='gatsbyImages'/>
+          </div>
+        </div>
+        <div className={imageContainers}>
+          <div className='innerContainer'>
+            <Img fluid={data.sushi.childImageSharp.fluid} className='gatsbyImages'/>
+          </div>
+          <div className='textInsideBox'>
+            <h3>This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?This is a picture of me on the beach in Bali enjpying a local beer and espresso. Basically my favorite two things. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere harum officiis nisi accusamus reprehenderit, tenetur consectetur deserunt molestiae voluptatum vitae labore fugiat necessitatibus officia eveniet a quidem ipsam fuga?</h3>
           </div>
         </div>
       </div>

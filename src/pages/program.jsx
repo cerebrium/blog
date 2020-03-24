@@ -46,7 +46,7 @@ const Program = () => {
     }
   return (
     <div className={mode}>
-      <SEO title="Home" />
+      <SEO title="Programming" />
       <div className={navBar}>
           <div className='dropDownHamburger'>
             <div className={line}></div>
@@ -64,7 +64,7 @@ const Program = () => {
               <Link to="/travel/" className='links'>Travel</Link>
             </div>
             <div className={linkStyle}>
-              <Link to="/credits/" className='links'>Credits</Link>
+              <Link to="/credits/" className='links'>Contact</Link>
             </div>
           </div>
         </div>

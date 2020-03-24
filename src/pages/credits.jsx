@@ -9,6 +9,7 @@ const Credits = () => {
   const [ dropDownContent, setDropDownContent ] = useState("dropdownContent")
   const [ navBar, setNavBar ] = useState("navBar")
   const [ mode, setMode ] = useState("overallDivMain")
+  const [ status, setStatus ] = useState('')
 
   useEffect ( () => {
     let myVar = props('modeToggle')
@@ -45,9 +46,28 @@ const Credits = () => {
       }
     }
 
+    const submitForm = (ev) => {
+      ev.preventDefault();
+      const form = ev.target;
+      const data = new FormData(form);
+      const xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+          form.reset();
+          setStatus("SUCCESS") 
+      } else {
+          setStatus("ERROR")
+      }
+      };
+      xhr.send(data);
+  }
+
   return (
     <div className={mode}>
-      <SEO title="Home" />
+      <SEO title="Creadits" />
       <div className={navBar}>
         <div className='dropDownHamburger'>
           <div className={line}></div>
@@ -76,7 +96,19 @@ const Credits = () => {
         </label>
       </div>
       <div className='content'>
-        <h1>Credits</h1>
+        <h1 className='centerTitle'>Contact Me</h1>
+        <div className='contact'>
+          <form onSubmit={submitForm} action='https://formspree.io/meqelkae' method="POST" className='myForm'>
+              <label className='labels'>Name:</label>{'  '}
+              <input type="text" name="name" className='inputBars'/><br/>
+              <label className='labels'>Email:</label>{'  '}
+              <input type="email" name="email" className='inputBars'/><br/>
+              <label className='labels'>Message:</label>
+              <textarea type="textarea" rows='15' cols='16' name="message" className='myTextArea'></textarea><br/>
+              {status === "SUCCESS" ? <p>Thanks!</p> : <button className='contactButton'>Submit</button>}
+              {status === "ERROR" && <p>Ooops! There was an error.</p>}
+          </form>
+        </div>
       </div>
     </div>
   )

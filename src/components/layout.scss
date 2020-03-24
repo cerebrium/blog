@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(255, 255, 255, 0.342);
 }
 
 %center-content {
@@ -71,6 +71,20 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 3%;
+}
+
+%buttons {
+    width: 10vw;
+    height: 5vh;
+    margin-bottom: 7%;
+    background-color: rgba(160, 159, 159, 0);
+    border: 3px solid green;
+    border-radius: 35%;
+    color: green;
+}
+
+%buttons:hover {
+    box-shadow: 5px 5px 5px green;
 }
 
 /********************** nav bar ********************************/
@@ -171,7 +185,7 @@ html, body {
 
 .overallDiv {
     @extend %overall-prototype;
-    background-image: url('./sven-scheuermeier.jpg');
+    background-image: url('./baliBackground.jpg');
 }
 
 
@@ -247,6 +261,32 @@ html, body {
     margin: 1%;
 }
 
+/********************** contact page ********************************/
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.inputBars {
+    width: 15vw;
+    margin-top: 2%;
+}
+
+.myTextArea {
+    width: 40vw;
+    height: 30vh;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.contactButton {
+    @extend %buttons;
+}
+
 /********************** Toggle Dark Mode page ********************************/
 .modeToggle {
     grid-area: toggleBar;
@@ -260,7 +300,7 @@ html, body {
     display: inline-block;
     width: 4vw;
     height: 3vh;
-    margin-right: 1%;
+    margin-right: 3%;
   }
   
   /* Hide default HTML checkbox */

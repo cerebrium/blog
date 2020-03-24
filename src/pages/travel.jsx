@@ -122,12 +122,12 @@ return (
           <Img fluid={data.beachBeer.childImageSharp.fluid} className='gatsbyImages'/>
         </div>
         <div className='textInsideBox'>
-          <h2>This is a picture of me on the beach in Bali enjoying a local beer and espresso. Basically my favorite two things. The coffee in Asia where I have been was very sweet. Because of this I opted for espresso whenever possible. Even the espresso came with cookies as you can see! <br /> The sunsets in Bali are fantastic, and really the people are all lovely. </h2>
+          <h2>This is a picture of me on the beach in Bali enjoying a local beer and espressos. Basically my favorite two things. The coffee in Asia where I have been was very sweet. Because of this I opted for espressos whenever possible. Even the espressos came with cookies as you can see! <br /> The sunsets in Bali are fantastic, and really the people are all lovely. </h2>
         </div>
       </div>
       <div className={imageContainersRight}>
         <div className='textInsideBox'>
-          <h2>In Bali we went to this hotel on the beach for their chicken satay and espresso before going out to boogie board. Most people surf, but boogie boarding was easier for me and my significant other to get into since it has a lower skill barrier for entry. Also its super fun and you can get a better tan! :) This picture is one of the espresso we had at the hotel. The little cookies they served there were absolutely amazing. You would think to go to Bali for the little cookies they serve with the espresso, but I would go back just for them!</h2>
+          <h2>In Bali we went to this hotel on the beach for their chicken satay and espressos before going out to boogie board. Most people surf, but boogie boarding was easier for me and my significant other to get into since it has a lower skill barrier for entry. Also its super fun and you can get a better tan! :) This picture is one of the espressos we had at the hotel. The little cookies they served there were absolutely amazing. You wouldn't think to go to Bali for the little cookies they serve with the espressos, but I would go back just for them!</h2>
         </div>
         <div className='innerContainer'>
           <Img fluid={data.espressoAndCookie.childImageSharp.fluid} className='gatsbyImages'/>

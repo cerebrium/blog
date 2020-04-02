@@ -328,31 +328,79 @@ html, body {
 /********************** contact page ********************************/
 
 .myForm {
+    margin-left: 5vw;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-size: 1.3em;
 }
 
 .inputBars {
-    width: 15vw;
-    margin-top: 2%;
+    width: 20vw;
+    height: 3vh;
+    margin-top: .5vh;
+    margin-bottom: 2vh;
+    border-radius: .35rem;
+    border: 3px solid #2196F3;
 }
+
+.inputBars:hover {
+    border: 3.5px solid rgb(97, 176, 240);
+}
+
+.contentContact{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('./contactBackground.jpg');
+    color: white;
+}
+
+.contact {
+    grid-area: mainContent;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.733);
+}
+
+.indexTitleContact {
+    @extend %center-text;
+    margin: 0;
+    font-size: 3em;
+} 
+
+.labels {
+    color: white;
+}
+
 
 .myTextArea {
     width: 40vw;
     height: 30vh;
-    margin-top: 2%;
+    margin-top: .5vh;
     margin-bottom: 5%;
+    border-radius: .35rem;
+    border: 3px solid #2196F3;
+}
+
+.myTextArea:hover {
+    border: 3.5px solid rgb(97, 176, 240);
 }
 
 .contactButton {
-    @extend %buttons;
+    width: 15vw;
+    height: 5vh;
+    font-size: 1.3em;
+    border-radius: .35rem;
+    background-color: #2196F3;
+    color: rgb(255, 255, 255);
+    border: none;
 }
 
-.contactButtonDark {
-    @extend %buttonsDark;
+.contactButton:hover {
+    transform: translateY(-.15rem);
+    background-color: rgb(97, 176, 240);
 }
 
 /********************** Toggle Dark Mode page ********************************/

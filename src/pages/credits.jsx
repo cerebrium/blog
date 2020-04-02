@@ -15,41 +15,12 @@ const Credits = () => {
 
   useEffect ( () => {
     let myVar = props('modeToggle')
-    if (myVar) {
-      setMode(myVar)
-      if (myVar === 'overallDivMainDark') {
         setLine('lineDark')
         setLinkStyle('linkStyleDark')
         setDropDownContent('dropdownContentDark')
         setNavBar('navBarDark')
         setButtonStyle('contactButtonDark')
-      }
-    }
   }, [])
-
-  const toggleMode = (e) => {
-      if (mode === 'overallDivMain') {
-        setMode('overallDivMainDark')
-        setLine('lineDark')
-        setLinkStyle('linkStyleDark')
-        setDropDownContent('dropdownContentDark')
-        setNavBar('navBarDark')
-        setButtonStyle('contactButtonDark')
-        props({
-          modeToggle: 'overallDivMainDark'
-        })
-      } else {
-        setMode('overallDivMain')
-        setLine('line')
-        setLinkStyle('linkStyle')
-        setDropDownContent('dropdownContent')
-        setNavBar('navBar')
-        setButtonStyle('contactButton')
-        props({
-          modeToggle: 'overallDivMain'
-        })
-      }
-    }
 
     const submitForm = (ev) => {
       ev.preventDefault();
@@ -71,8 +42,9 @@ const Credits = () => {
   }
 
   return (
-    <div className={mode}>
-      <SEO title="Creadits" />
+    <div className='contentContact'>
+      <div className='contact'>
+      <SEO title="Contact" />
       <div className={navBar}>
         <div className='dropDownHamburger'>
           <div className={line}></div>
@@ -94,28 +66,19 @@ const Credits = () => {
           </div>
         </div>
       </div>
-      <div className='modeToggle'>
-        <label className='switch'>
-          <input type='checkbox' onClick={toggleMode}/>
-          <span className='slider round'></span>
-        </label>
-      </div>
-      <div className='content'>
-        <h1 className='indexTitle'>Contact Me</h1>
-        <div className='contact'>
+          <h1 className='indexTitleContact'>Drop me a line!</h1>
           <form onSubmit={submitForm} action='https://formspree.io/meqelkae' method="POST" className='myForm'>
-              <label className='labels'>Name:</label>{'  '}
-              <input type="text" name="name" className='inputBars'/><br/>
-              <label className='labels'>Email:</label>{'  '}
-              <input type="email" name="email" className='inputBars'/><br/>
+              <label className='labels'>Name:</label>
+              <input type="text" name="name" className='inputBars'/>
+              <label className='labels'>Email:</label>
+              <input type="email" name="email" className='inputBars'/>
               <label className='labels'>Message:</label>
-              <textarea type="textarea" rows='15' cols='16' name="message" className='myTextArea'></textarea><br/>
-              {status === "SUCCESS" ? <p>Thanks!</p> : <button className={buttonStyle}>Submit</button>}
+              <textarea type="textarea" rows='15' cols='16' name="message" className='myTextArea'></textarea>
+              {status === "SUCCESS" ? <p>Thanks!</p> : <button className='contactButton'>Submit</button>}
               {status === "ERROR" && <p>Ooops! There was an error.</p>}
           </form>
         </div>
       </div>
-    </div>
   )
 }
 

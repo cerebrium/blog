@@ -353,7 +353,8 @@ html, body {
 .contentContact{
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url('./contactBackground.jpg');
+    background-image: url('./contactBack.jpg');
+    background-size: cover;
     color: white;
 }
 
@@ -366,6 +367,7 @@ html, body {
 
 .indexTitleContact {
     @extend %center-text;
+    padding-top: 2vh;
     margin: 0;
     font-size: 3em;
 } 
@@ -373,7 +375,6 @@ html, body {
 .labels {
     color: white;
 }
-
 
 .myTextArea {
     width: 40vw;

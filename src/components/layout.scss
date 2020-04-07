@@ -240,6 +240,7 @@ html, body {
 .overallDiv {
     @extend %overall-prototype;
     background-image: url('./aleks-dahlberg-g58DqgOzCcM-unsplash\ \(1\).jpg');
+    overflow: hidden;
 }
 
 

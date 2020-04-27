@@ -316,6 +316,7 @@ html, body {
 
 .gatsbyImages {
     max-height: 50vh;
+    min-width: 19vw;
     max-width: 20vw;
 }
 
@@ -588,7 +589,62 @@ html, body {
         }
         
     }
-/****************************************** mobile *************************************************/
+
+    @media only screen and (max-width: 1350px) {
+        .gatsbyImages {
+            max-height: 50vh;
+            min-width: 29vw;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        .textInsideBox {
+            width: 40vw;
+            margin-left: 10vw;
+        }
+
+        .imageContainer {
+            justify-content: space-evenly;
+
+        }
+    
+        .imageContainerDark {
+            justify-content: space-evenly;
+        }
+
+        .imageContainerRight {
+            justify-content: space-evenly;
+            padding-right: 13vw;
+            padding-left: 0;
+            margin-left: 10vw;
+            margin-right: 2vw;
+        }
+    
+        .imageContainerRightDark {
+            justify-content: space-evenly;
+            padding-right: 13vw;
+            padding-left: 0;
+            margin-left: 10vw;
+            margin-right: 2vw;
+        }
+
+    }
+
+    @media only screen and (max-width: 1350px) {
+        .gatsbyImages {
+            min-height: 40vh;
+            min-width: 30vw;
+        }
+
+    }
+
+
+
+
+
+    /****************************************** mobile *************************************************/
 @media only screen and (max-width: 600px) {
     html, body {
         padding: 0;
@@ -596,19 +652,9 @@ html, body {
         font-size: 90%;
     }
 
-    // .dropdownContentMain {
-    //     width: 25vw;
-    // }
-
-    // .dropdownContent {
-    //     width: 25vw;
-    // }
-
-    // .dropdownContentDark {
-    //     width: 25vw;
-    // }
     .navBar:hover .dropdownContent {
         width: 25vw;
+        height: 15vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -619,6 +665,7 @@ html, body {
     
     .navBarDark:hover .dropdownContentDark {
         width: 25vw;
+        height: 15vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -629,6 +676,7 @@ html, body {
     
     .navBarMain:hover .dropdownContentMain {
         width: 25vw;
+        height: 15vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;

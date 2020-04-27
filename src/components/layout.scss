@@ -140,7 +140,7 @@
 
 .line {
     background-color: rgb(63, 62, 62);
-    height: .6vh;
+    height: .4vh;
     width: 3vw;
     margin-bottom: .3vh;
     padding-bottom: .3vh;
@@ -148,7 +148,7 @@
 
 .lineDark {
     background-color: #2196F3;
-    height: .6vh;
+    height: .4vh;
     width: 3vw;
     margin-bottom: .3vh;
     padding-bottom: .3vh;
@@ -156,7 +156,7 @@
 
 .lineMain {
     background-color: white;
-    height: .6vh;
+    height: .4vh;
     width: 3vw;
     margin-bottom: .3vh;
     padding-bottom: .3vh;
@@ -634,20 +634,20 @@ html, body {
 
         .lineDark {
             width: 4vw;
-            margin-bottom: .4vh;
-            padding-bottom: .4vh;
+            margin-bottom: 4px;
+            padding-bottom: .3vh;
         }
     
         .line {
             width: 4vw;
-            margin-bottom: .4vh;
-            padding-bottom: .4vh;
+            margin-bottom: 4px;
+            padding-bottom: .3vh;
         }
     
         .lineMain {
             width: 4vw;
-            margin-bottom: .4vh;
-            padding-bottom: .4vh;
+            margin-bottom: 4px;
+            padding-bottom: .3vh;
         }
 
         h2 {
@@ -735,7 +735,7 @@ html, body {
     }
 
     .contentTravel {
-        padding-bottom: 5vh;
+        padding-bottom: 10vh;
     }
 
     .navBar:hover .dropdownContent {
@@ -781,14 +781,17 @@ html, body {
 
     .lineDark {
         width: 10vw;
+        height: .2vh;
     }
 
     .line {
         width: 10vw;
+        height: .2vh;
     }
 
     .lineMain {
         width: 10vw;
+        height: .2vh;
     }
 
     .indexLine {
@@ -832,7 +835,7 @@ html, body {
     }
 
     .gatsbyImages {
-        min-height: 1vh;
+        min-height: 15vh;
         min-width: 30vw;
         margin-top: 2vh;
     }

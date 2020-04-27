@@ -128,7 +128,7 @@ const Food = () => {
           </div>
         </div>
         <div className={imageContainersRight}>
-          <div className='textInsideBox'>
+          <div className='textInsideBoxRight'>
             <h2>Bali really is one of my favorite places on earth, and you can probably tell from all of the pictures from there! This was me having another espresso and cookie combination at a beach hotel, but I also opted for one of their local juices there. This one was the Bali tonic, but they were all good. They are just fruit juice freshly squeezed and put into a bottle with healthy spices and things. Carrot and turmeric actually go quite well with each other... as I found out on this trip!</h2>
           </div>
           <div className='innerContainer'>

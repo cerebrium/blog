@@ -127,7 +127,7 @@ return (
         </div>
       </div>
       <div className={imageContainersRight}>
-        <div className='textInsideBox'>
+        <div className='textInsideBoxRight'>
           <h2>In Bali we went to this hotel on the beach for their chicken satay and espressos before going out to boogie board. Most people surf, but boogie boarding was easier for me and my significant other to get into since it has a lower skill barrier for entry. Also its super fun and you can get a better tan! :) This picture is one of the espressos we had at the hotel. The little cookies they served there were absolutely amazing. You wouldn't think to go to Bali for the little cookies they serve with the espressos, but I would go back just for them!</h2>
         </div>
         <div className='innerContainer'>

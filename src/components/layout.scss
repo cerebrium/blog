@@ -356,6 +356,10 @@ html, body {
     margin: 2%;
 }
 
+.textInsideBoxRight {
+    margin: 2%;
+}
+
 /********************** contact page ********************************/
 
 .myForm {
@@ -597,7 +601,7 @@ html, body {
 
         .navBar:hover .dropdownContent {
             width: 12vw;
-            min-height: 14vh;
+            min-height: 18vh;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -608,7 +612,7 @@ html, body {
         
         .navBarDark:hover .dropdownContentDark {
             width: 12vw;
-            min-height: 14vh;
+            min-height: 18vh;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -657,6 +661,10 @@ html, body {
         .textInsideBox {
             width: 40vw;
             margin-left: 10vw;
+        }
+
+        .textInsideBoxRight {
+            width: 45vw;
         }
 
         .imageContainer {
@@ -735,7 +743,7 @@ html, body {
     }
 
     .contentTravel {
-        padding-bottom: 10vh;
+        padding-bottom: 20vh;
     }
 
     .navBar:hover .dropdownContent {
@@ -835,18 +843,24 @@ html, body {
     }
 
     .gatsbyImages {
-        min-height: 15vh;
-        min-width: 30vw;
+        min-height: 25vh;
+        min-width: 40vw;
         margin-top: 2vh;
     }
 
     .textInsideBox {
         width: 40vw;
-        margin-left: 10vw;
+        padding-left: 12vw;
+    }
+
+    .textInsideBoxRight {
+        width: 30vw;
+        margin: 0;
     }
 
     .imageContainer {
         justify-content: space-evenly;
+        padding: 0;
     }
 
     .imageContainerDark {

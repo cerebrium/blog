@@ -141,22 +141,25 @@
 .line {
     background-color: rgb(63, 62, 62);
     height: .6vh;
-    width: 2vw;
-    margin-bottom: 1.5px;
+    width: 3vw;
+    margin-bottom: .3vh;
+    padding-bottom: .3vh;
 }
 
 .lineDark {
     background-color: #2196F3;
     height: .6vh;
-    width: 2vw;
-    margin-bottom: 1.5px;
+    width: 3vw;
+    margin-bottom: .3vh;
+    padding-bottom: .3vh;
 }
 
 .lineMain {
     background-color: white;
     height: .6vh;
-    width: 2vw;
-    margin-bottom: 1.5px;
+    width: 3vw;
+    margin-bottom: .3vh;
+    padding-bottom: .3vh;
 }
 
 .dropdownContent {
@@ -591,9 +594,60 @@ html, body {
     }
 
     @media only screen and (max-width: 1350px) {
+
+        .navBar:hover .dropdownContent {
+            width: 12vw;
+            min-height: 14vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: black;
+            padding-top: 2vh;
+            padding-bottom: 1vh;
+        }
+        
+        .navBarDark:hover .dropdownContentDark {
+            width: 12vw;
+            min-height: 14vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: rgb(212, 212, 212);
+            padding-top: 2vh;
+            padding-bottom: 1vh;
+        }
+        
+        .navBarMain:hover .dropdownContentMain {
+            width: 12vw;
+            min-height: 14vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: white;
+            padding-top: 2vh;
+            padding-bottom: 1vh;
+        }
         .gatsbyImages {
             max-height: 50vh;
             min-width: 29vw;
+        }
+
+        .lineDark {
+            width: 4vw;
+            margin-bottom: .4vh;
+            padding-bottom: .4vh;
+        }
+    
+        .line {
+            width: 4vw;
+            margin-bottom: .4vh;
+            padding-bottom: .4vh;
+        }
+    
+        .lineMain {
+            width: 4vw;
+            margin-bottom: .4vh;
+            padding-bottom: .4vh;
         }
 
         h2 {
@@ -630,12 +684,44 @@ html, body {
             margin-right: 2vw;
         }
 
+            /* The switch - the box around the slider */
+        .switch {
+            width: 5vw;
+            height: 3vh;
+            margin-right: 1%;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        
+        .slider:before {
+            height: 2vh;
+            width: 1.2vw;
+            left: 10%;
+            bottom: 15%;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(3vw);
+            -ms-transform: translateX(3vw);
+            transform: translateX(3vw);
+        }
+
     }
 
-    @media only screen and (max-width: 1350px) {
+    @media only screen and (max-width: 950px) {
         .gatsbyImages {
             min-height: 40vh;
             min-width: 30vw;
+        }
+
+        .linksMainTwo {
+            font-size: 1.1em;
         }
 
     }
@@ -654,7 +740,7 @@ html, body {
 
     .navBar:hover .dropdownContent {
         width: 25vw;
-        height: 15vh;
+        min-height: 11vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -665,7 +751,7 @@ html, body {
     
     .navBarDark:hover .dropdownContentDark {
         width: 25vw;
-        height: 15vh;
+        min-height: 11vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -676,7 +762,7 @@ html, body {
     
     .navBarMain:hover .dropdownContentMain {
         width: 25vw;
-        height: 15vh;
+        min-height: 11vh;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -746,6 +832,7 @@ html, body {
     }
 
     .gatsbyImages {
+        min-height: 1vh;
         min-width: 30vw;
         margin-top: 2vh;
     }
